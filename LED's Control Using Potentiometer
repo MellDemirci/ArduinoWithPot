@@ -1,48 +1,48 @@
-int led1=2;
-int led2=3;
-int led3=4;
-int led4=5;
+int ledA=2;
+int ledB=3;
+int ledC=4;
+int ledD=5;
 int pot=A0;
-int potdeger;
+int potVALUE;
 void setup() {
-  pinMode(led1,OUTPUT);
-  pinMode(led2,OUTPUT);
-  pinMode(led3,OUTPUT);
-  pinMode(led4,OUTPUT);
+  pinMode(ledA,OUTPUT);
+  pinMode(ledB,OUTPUT);
+  pinMode(ledC,OUTPUT);
+  pinMode(ledD,OUTPUT);
   pinMode(pot,INPUT);
   }
 
 void loop() {
-  potdeger= analogRead(pot);
+  potVALUE= analogRead(pot);
 
-    if(potdeger<250){
-      digitalWrite(led1,LOW);
-      digitalWrite(led2,LOW);
-      digitalWrite(led3,LOW);
-      digitalWrite(led4,LOW);
+    if(potVALUE<250){
+      digitalWrite(ledA,LOW);
+      digitalWrite(ledB,LOW);
+      digitalWrite(ledC,LOW);
+      digitalWrite(ledD,LOW);
       }
-    if(potdeger>250){
-      digitalWrite(led1,HIGH);
-      digitalWrite(led2,LOW);
-      digitalWrite(led3,LOW);
-      digitalWrite(led4,LOW);
+    if(potVALUE>250){
+      digitalWrite(ledA,HIGH);
+      digitalWrite(ledB,LOW);
+      digitalWrite(ledC,LOW);
+      digitalWrite(ledD,LOW);
       }
-    if(potdeger>500){
-      digitalWrite(led1,HIGH);
-      digitalWrite(led2,HIGH);
-      digitalWrite(led3,LOW);
-      digitalWrite(led4,LOW);
+    if(potVALUE>500){
+      digitalWrite(ledA,HIGH);
+      digitalWrite(ledB,HIGH);
+      digitalWrite(ledC,LOW);
+      digitalWrite(ledD,LOW);
       }
-    if(potdeger>750){
-      digitalWrite(led1,HIGH);
-      digitalWrite(led2,HIGH);
-      digitalWrite(led3,HIGH);
-      digitalWrite(led4,LOW);
+    if(potVALUE>750){
+      digitalWrite(ledA,HIGH);
+      digitalWrite(ledB,HIGH);
+      digitalWrite(ledC,HIGH);
+      digitalWrite(ledD,LOW);
       }
-    if(potdeger>1000){
-      digitalWrite(led1,HIGH);
-      digitalWrite(led2,HIGH);
-      digitalWrite(led3,HIGH);
-      digitalWrite(led4,HIGH);
+    if(potVALUE>1000){
+      digitalWrite(ledA,HIGH);
+      digitalWrite(ledB,HIGH);
+      digitalWrite(ledC,HIGH);
+      digitalWrite(ledD,HIGH);
       }
 }
