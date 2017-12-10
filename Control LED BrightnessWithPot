@@ -1,0 +1,15 @@
+int led=5;
+int potMell=A0;
+int potVALUE;
+
+void setup(){
+
+}
+
+void loop(){
+  potVALUE=analogRead(potMell);
+  potVALUE=map(potVALUE, 0, 1023, 0, 255);
+  analogWrite(led, potVALUE);
+  delay(10);
+
+}
