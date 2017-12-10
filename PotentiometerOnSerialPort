@@ -1,0 +1,13 @@
+int potMell=A0;
+void setup() {
+
+Serial.begin(9600);
+Serial.println("analog input data");
+}
+
+void loop() {
+
+int value=analogRead(potMell);
+Serial.println(value);
+delay(500);
+}
