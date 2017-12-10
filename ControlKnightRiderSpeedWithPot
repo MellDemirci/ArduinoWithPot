@@ -1,0 +1,30 @@
+int LED; 
+int potMell=A0;
+ 
+void setup() {
+  Serial.begin(9600); 
+ 
+  for(LED=9;LED>=2;LED--){
+    pinMode(LED, OUTPUT);   
+  }
+}
+ 
+void loop() {
+ 
+  for(LED=9;LED>=2;LED--) {      
+    potMell= analogRead(A0);              
+    potMell= map(potMell,0,1023,0,1000);  
+                                       
+    digitalWrite(LED, HIGH);
+    Serial.print("LED: ");
+    Serial.print(LED);
+ 
+    Serial.print("\t");
+    Serial.print("waiting period: ");
+    Serial.print(potMell);
+    Serial.println("ms");
+    delay(potMell);
+    digitalWrite(LED, LOW);
+  }
+ 
+}
